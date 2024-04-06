@@ -61,7 +61,7 @@ public class PatientAppApplication {
 
 
 			User user1=new User();
-			user1.setUsername("yassine lamouadden");
+			user1.setUsername("saad oudad");
 			user1.setPassword("123456");
 			userService.addNewUser(user1);
 
@@ -76,12 +76,12 @@ public class PatientAppApplication {
 				userService.addNewRole(role);
 			});
 
-			userService.addRoleToUser("yassine lamouadden","ADMIN");
-			userService.addRoleToUser("yassine lamouadden","USER");
+			userService.addRoleToUser("saad oudad","ADMIN");
+			userService.addRoleToUser("saad oudad","USER");
 			userService.addRoleToUser("karim","STUDENT");
 
 			try {
-				User user=userService.authenticate("yassine lamouadden",
+				User user=userService.authenticate("saad oudad",
 						"123456");
 				System.out.println(user);
 				user.getRoles().forEach(role->{
